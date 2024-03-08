@@ -21,6 +21,7 @@ fornito in consegna.
 
 const bigSquare = document.createElement('div');
 bigSquare.classList = 'd-flex justify-content-between align-content-between flex-wrap';
+bigSquare.setAttribute('id','boxes');
 console.log(bigSquare);
 
 const numSquare = 100;
@@ -28,17 +29,25 @@ let square = '';
 
 for (let i= 1; i <= numSquare; i++) {
     if ((i % 3 === 0) && (i % 5 === 0)) {
-        console.log(square);
-        square = `<div class="box">${'FizzBuzz'}</div>`;
+        square += `<div class="box fizzbuzz">${'fizzbuzz'}</div>`;
     } else if (i % 3 === 0) {
-        console.log(square);
-        square = `<div class="box">${'Fizz'}</div>`;
+        square += `<div class="box fizz">${'fizz'}</div>`;
     } else if (i % 5 === 0) {
-        console.log(square);
-        square = `<div class="box">${'Buzz'}</div>`;
+        square += `<div class="box buzz">${'buzz'}</div>`;
     } else {
-        console.log(square);
-        square = `<div class="box">${i}</div>`;
+        square += `<div class="box">${i}</div>`;
     }
 }
 
+bigSquare.innerHTML = square;
+
+console.dir(bigSquare);
+
+const container = document.querySelector('.container');
+container.append(bigSquare);
+
+// const title = document.createElement('h1');
+// title.classList = 'text-center fw-bold fs-1 text-white';
+// title = 'FizzBuzzDOM'
+
+// bigSquare.appendChild(title);

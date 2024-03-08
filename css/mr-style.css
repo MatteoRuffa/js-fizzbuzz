@@ -1,0 +1,46 @@
+:root {
+    --mr-colo-bg: #083B4C;
+    --mr-color-light: #FFFFFF;
+    --mr-color-square-primary: #1389B2;
+    --mr-color-square-secondary: #0CD6A1;
+    --mr-color-square-tertiary: #FFD166;
+    --mr-color-square-quartary: #F0466F;
+}
+
+body {
+    background-color: var(--mr-colo-bg);
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+.box{
+	width: 150px;
+	height:150px;
+	background-color: var(--mr-color-square-primary);
+	color: black;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#boxes{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.fizzbuzz {
+    background-color: var(--mr-color-square-quartary);
+}
+
+.fizz {
+    background-color: var(--mr-color-square-secondary);
+}
+
+.buzz {
+    background-color: var(--mr-color-square-tertiary);
+}
