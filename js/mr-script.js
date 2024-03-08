@@ -23,25 +23,22 @@ const bigSquare = document.createElement('div');
 bigSquare.classList = 'd-flex justify-content-between align-content-between flex-wrap';
 console.log(bigSquare);
 
-let square = document.createElement('div');
-square.classList = 'd-flex justify-content-center align-items-center';
-square.style.width = '100px';
-square.style.height = '100px';
-console.log(square);
-
-bigSquare.appendChild(square);
-
 const numSquare = 100;
+let square = '';
 
 for (let i= 1; i <= numSquare; i++) {
     if ((i % 3 === 0) && (i % 5 === 0)) {
-        console.log('FizzBuzz');
+        console.log(square);
+        square = `<div class="box">${'FizzBuzz'}</div>`;
     } else if (i % 3 === 0) {
-        console.log('Fizz');
+        console.log(square);
+        square = `<div class="box">${'Fizz'}</div>`;
     } else if (i % 5 === 0) {
-        console.log('Buzz');
+        console.log(square);
+        square = `<div class="box">${'Buzz'}</div>`;
     } else {
-        console.log(i);
+        console.log(square);
+        square = `<div class="box">${i}</div>`;
     }
 }
 
