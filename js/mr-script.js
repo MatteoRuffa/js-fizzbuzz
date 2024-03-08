@@ -19,9 +19,21 @@ fornito in consegna.
 
 /* SCRIVO PROGRAMMA CHE STAMPA IN CONSOLE I NUMERI DA 1 A 100  */
 
+const bigSquare = document.createElement('div');
+bigSquare.classList = 'd-flex justify-content-between align-content-between flex-wrap';
+console.log(bigSquare);
 
+let square = document.createElement('div');
+square.classList = 'd-flex justify-content-center align-items-center';
+square.style.width = '100px';
+square.style.height = '100px';
+console.log(square);
 
-for (let i= 1; i <=100; i++) {
+bigSquare.appendChild(square);
+
+const numSquare = 100;
+
+for (let i= 1; i <= numSquare; i++) {
     if ((i % 3 === 0) && (i % 5 === 0)) {
         console.log('FizzBuzz');
     } else if (i % 3 === 0) {
@@ -32,5 +44,4 @@ for (let i= 1; i <=100; i++) {
         console.log(i);
     }
 }
-
 
